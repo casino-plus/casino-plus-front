@@ -1,6 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
+import 'components/hook_widget.dart';
+import 'components/bottom_tab_page.dart';
+import 'config/color_theme.dart';
+import 'pages/splash/splash.dart';
+import 'pages/profile/profile.dart';
+import 'pages/slot/slot.dart';
+import 'pages/roulette_poker/roulette_poker.dart';
 
 void main() => runApp(CasinoPlusApp());
 
@@ -8,9 +12,20 @@ class CasinoPlusApp extends HookWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body: Text('Empty'),
-      ),
+      title: 'Casino+',
+      theme: colorTheme(),
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Splash(),
+        '/home': (context) => BottomTabPage(
+              [
+                Item('Profile', Icon(Icons.person), () => Profile()),
+                Item('Slot', Icon(Icons.computer), () => Slot()),
+              ],
+            ),
+        '/roulette-poker': (context) => RoulettePoker(),
+      },
     );
   }
 }
