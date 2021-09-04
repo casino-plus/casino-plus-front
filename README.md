@@ -11,7 +11,7 @@
 ### 1. Chrome でアプリを動かす
 
 ```
-$ futter run -d chrome
+$ flutter run -d chrome
 ```
 
 ### 2. iOS, Android など接続された全てのプラットフォームで動かす
@@ -19,7 +19,7 @@ $ futter run -d chrome
 事前にそれぞれの起動が必要です
 
 ```
-$ futter run -d all
+$ flutter run -d all
 ```
 
 <br>
