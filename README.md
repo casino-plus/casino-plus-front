@@ -37,9 +37,8 @@ $ flutter run -d all
 
 ## 依存パッケージ
 
-- flutter_riverpod:
-- hooks_riverpod:
+- flutter_riverpod
+- hooks_riverpod
 - intl
 - http
-
-
+- file_picker
