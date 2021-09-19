@@ -4,7 +4,7 @@ import 'config/color_theme.dart';
 import 'pages/splash/splash.dart';
 import 'pages/profile/profile.dart';
 import 'pages/slot/slot.dart';
-import 'pages/roulette_poker/roulette_poker.dart';
+import 'pages/game/game.dart';
 
 void main() => runApp(CasinoPlusApp());
 
@@ -24,7 +24,7 @@ class CasinoPlusApp extends HookWidget {
                 Item('Slot', Icon(Icons.computer), () => Slot()),
               ],
             ),
-        '/roulette-poker': (context) => RoulettePoker(),
+        '/game': (context) => Game(),
       },
     );
   }
