@@ -1,7 +1,10 @@
 import '../../components/hook_widget.dart';
 
-Widget Slot() {
-  return Scaffold(
-    body: Text('Slot'),
-  );
+class Slot extends HookWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Text('Slot'),
+    );
+  }
 }
