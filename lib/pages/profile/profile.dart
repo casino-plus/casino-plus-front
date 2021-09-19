@@ -1,4 +1,4 @@
-import '../../components/user_name.dart';
+import '../../components/user_name_plate.dart';
 import '../../store/store.dart';
 import '../../store/app_state.dart';
 import '../../components/chip_counter.dart';
