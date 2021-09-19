@@ -4,41 +4,41 @@ import 'dart:convert'; // JSON
 // 接続先のAPI
 class API {
   String path(int id) {
-    return "/test/" + id.toString();
+    return '/test/' + id.toString();
   }
 }
 
 // リクエスト
 class Request {
-  String param = "";
+  String param = '';
   Request(this.param);
 
   // Class -> JSON
   dynamic toJson() {
     return {
-      'param': this.param,
+      'param': param,
     };
   }
 }
 
 // レスポンス
 class Response {
-  String param = "";
+  String param = '';
 
   // JSON -> Class
   Response.fromJson(dynamic rawJson) {
-    this.param = rawJson['param'];
+    param = rawJson['param'];
   }
 }
 
 // リクエスト送信
 Future<Response> sendRequest(int id, Request request) async {
-  var urlString = "http://0.0.0.0:3000" + API().path(id);
+  var urlString = 'http://0.0.0.0:3000' + API().path(id);
   var url = Uri.parse(urlString);
   final response = await http.post(
     url,
     body: json.encode(request.toJson()),
-    headers: {"Content-Type": "application/json"},
+    headers: {'Content-Type': 'application/json'},
   );
 
   if (response.statusCode == 200) {
@@ -47,6 +47,6 @@ Future<Response> sendRequest(int id, Request request) async {
     dynamic rawJson = json.decode(rawString);
     return Response.fromJson(rawJson);
   } else {
-    throw ("error");
+    throw ('error');
   }
 }
