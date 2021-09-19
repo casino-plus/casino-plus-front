@@ -4,6 +4,7 @@ class SafeURLImage extends HookWidget {
   final String url;
   SafeURLImage(this.url);
 
+  @override
   Widget build(BuildContext context) {
     return Container(
       width: 120,

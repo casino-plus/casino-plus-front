@@ -14,6 +14,8 @@ final provider = StateNotifierProvider<TabSwitcher, int>(
 class BottomTabPage extends HookWidget {
   final List<Item> items;
   BottomTabPage(this.items);
+
+  @override
   Widget build(BuildContext context) {
     return ProviderScope(child: TabBar(items));
   }
@@ -23,6 +25,7 @@ class TabBar extends HookWidget {
   final List<Item> items;
   TabBar(this.items);
 
+  @override
   Widget build(BuildContext context) {
     final index = useProvider(provider);
     final barItems = items.map(

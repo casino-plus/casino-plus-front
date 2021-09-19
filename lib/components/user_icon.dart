@@ -24,6 +24,7 @@ class UserIcon extends HookWidget {
     }
   }
 
+  @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(

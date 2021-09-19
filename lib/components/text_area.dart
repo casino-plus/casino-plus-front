@@ -3,6 +3,8 @@ import 'hook_widget.dart';
 class TextArea extends HookWidget {
   final TextEditingController controller;
   TextArea(this.controller);
+
+  @override
   Widget build(BuildContext context) {
     return TextField(
       controller: controller,
