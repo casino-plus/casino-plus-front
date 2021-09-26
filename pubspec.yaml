@@ -17,7 +17,7 @@ dependencies:
   intl:
   http:
   file_picker:
-  idb_sqflite:
+  hive:
 
 dev_dependencies:
   flutter_test:
