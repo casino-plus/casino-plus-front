@@ -21,7 +21,7 @@ class Profile extends HookWidget {
           Container(
             width: 300,
             height: 60,
-            child: UserNamePlate(store.state.loginUser.nickname),
+            child: UserNamePlate(store2.state.loginUser.nickname),
           ),
           Container(
             width: 300,

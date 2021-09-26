@@ -1,5 +1,4 @@
-import 'package:casino_plus_app/types/api_models.dart';
-
+import '../types/api_models.dart';
 import '../store/actions.dart';
 import 'reducers/app.dart';
 import 'app_state.dart';
@@ -18,3 +17,23 @@ final store = useReducer(
   ),
   initialAction: AppAction(),
 );
+
+final store2 = MyStore();
+
+class MyStore extends Store<AppState, AppAction> {
+  @override
+  AppState state = AppState(
+    isLoading: false,
+    game: const Game(
+      [],
+      Board([], [], 0, 0),
+      Dock([]),
+    ),
+    loginUser: const User('', ''),
+  );
+
+  @override
+  void dispatch(AppAction action) {
+    state = appReducer(state, action);
+  }
+}

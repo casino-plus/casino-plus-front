@@ -1,34 +1,26 @@
+import 'dart:typed_data';
+
 import 'hook_widget.dart';
 import 'package:file_picker/file_picker.dart';
 import '../../utils/image_picker.dart';
 
-class Notifier extends StateNotifier<PlatformFile?> {
-  Notifier() : super(null);
-  void setImage(PlatformFile file) {
-    state = file;
-  }
-}
-
-final provider = StateNotifierProvider<Notifier, PlatformFile?>(
-  (refs) => Notifier(),
-);
-
 class ImagePickerView extends HookWidget {
   final Widget placeHolder;
-  ImagePickerView(this.placeHolder);
+  ImagePickerView(this.placeHolder, {this.onPickImage});
+  final imageBytes = useState<Uint8List?>(null);
+  final void Function(Uint8List imageBytes)? onPickImage;
 
   @override
   Widget build(BuildContext context) {
-    final file = useProvider(provider);
     return GestureDetector(
       onTap: () => onTap(context),
       child: Container(
         width: 200,
         height: 200,
-        child: (file == null)
+        child: (imageBytes.value == null)
             ? placeHolder
             : Image.memory(
-                file.bytes!,
+                imageBytes.value!,
                 fit: BoxFit.cover,
               ),
       ),
@@ -36,11 +28,13 @@ class ImagePickerView extends HookWidget {
   }
 
   void onTap(BuildContext context) async {
-    final imageFile = await pickImage();
-    if (imageFile == null) {
+    final file = await pickImage();
+    if (file == null) {
       return;
     }
-    final notifier = context.read(provider.notifier);
-    notifier.setImage(imageFile);
+    imageBytes.value = file.bytes;
+    if (onPickImage != null) {
+      onPickImage!(file.bytes!);
+    }
   }
 }
