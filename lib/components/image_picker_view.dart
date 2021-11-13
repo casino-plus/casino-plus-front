@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:file_picker/file_picker.dart';
 import '../../utils/image_picker.dart';
+import 'dart:typed_data';
+import 'package:file_picker/file_picker.dart';
+import '../../utils/image_picker.dart';
 
 class Notifier extends StateNotifier<PlatformFile?> {
   Notifier() : super(null);
@@ -16,7 +19,9 @@ final provider = StateNotifierProvider<Notifier, PlatformFile?>(
 
 class ImagePickerView extends HookConsumerWidget {
   final Widget placeHolder;
-  ImagePickerView(this.placeHolder);
+  ImagePickerView(this.placeHolder, {this.onPickImage});
+  final imageBytes = useState<Uint8List?>(null);
+  final void Function(Uint8List imageBytes)? onPickImage;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -26,10 +31,10 @@ class ImagePickerView extends HookConsumerWidget {
       child: Container(
         width: 200,
         height: 200,
-        child: (file == null)
+        child: (imageBytes.value == null)
             ? placeHolder
             : Image.memory(
-                file.bytes!,
+                imageBytes.value!,
                 fit: BoxFit.cover,
               ),
       ),
@@ -37,11 +42,13 @@ class ImagePickerView extends HookConsumerWidget {
   }
 
   void onTap(WidgetRef ref) async {
-    final imageFile = await pickImage();
-    if (imageFile == null) {
+    final file = await pickImage();
+    if (file == null) {
       return;
     }
-    final notifier = ref.read(provider.notifier);
-    notifier.setImage(imageFile);
+    imageBytes.value = file.bytes;
+    if (onPickImage != null) {
+      onPickImage!(file.bytes!);
+    }
   }
 }

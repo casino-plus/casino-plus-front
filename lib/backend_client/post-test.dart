@@ -1,5 +1,6 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert'; // JSON
+import '../config/url.dart';
 
 // 接続先のAPI
 class API {
@@ -33,7 +34,7 @@ class Response {
 
 // リクエスト送信
 Future<Response> sendRequest(int id, Request request) async {
-  var urlString = 'http://0.0.0.0:3000' + API().path(id);
+  var urlString = webAPIBaseURL + API().path(id);
   var url = Uri.parse(urlString);
   final response = await http.post(
     url,
