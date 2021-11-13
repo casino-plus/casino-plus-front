@@ -1,8 +1,9 @@
-import '../../components/hook_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class Slot extends HookWidget {
+class Slot extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       body: Text('Slot'),
     );

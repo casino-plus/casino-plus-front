@@ -1,6 +1,7 @@
-import 'hook_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class UserIcon extends HookWidget {
+class UserIcon extends HookConsumerWidget {
   final String iconURL;
   final double size;
   final double? cornerRadius;
@@ -25,7 +26,7 @@ class UserIcon extends HookWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(

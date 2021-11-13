@@ -1,4 +1,5 @@
-import 'hook_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:file_picker/file_picker.dart';
 import '../../utils/image_picker.dart';
 
@@ -13,15 +14,15 @@ final provider = StateNotifierProvider<Notifier, PlatformFile?>(
   (refs) => Notifier(),
 );
 
-class ImagePickerView extends HookWidget {
+class ImagePickerView extends HookConsumerWidget {
   final Widget placeHolder;
   ImagePickerView(this.placeHolder);
 
   @override
-  Widget build(BuildContext context) {
-    final file = useProvider(provider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final file = ref.watch(provider);
     return GestureDetector(
-      onTap: () => onTap(context),
+      onTap: () => onTap(ref),
       child: Container(
         width: 200,
         height: 200,
@@ -35,12 +36,12 @@ class ImagePickerView extends HookWidget {
     );
   }
 
-  void onTap(BuildContext context) async {
+  void onTap(WidgetRef ref) async {
     final imageFile = await pickImage();
     if (imageFile == null) {
       return;
     }
-    final notifier = context.read(provider.notifier);
+    final notifier = ref.read(provider.notifier);
     notifier.setImage(imageFile);
   }
 }

@@ -1,13 +1,13 @@
 import 'player.dart';
 import 'dock.dart';
 import 'board.dart';
-import '../../store/store.dart';
-import '../../types/api_models.dart' as Model;
-import '../../components/hook_widget.dart';
+import '../../state/game.dart' as game_state;
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class Game extends HookWidget {
+class Game extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       body: Column(
         children: [

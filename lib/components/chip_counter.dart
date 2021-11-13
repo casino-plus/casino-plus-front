@@ -1,11 +1,12 @@
-import 'hook_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class ChipCounter extends HookWidget {
+class ChipCounter extends HookConsumerWidget {
   final int chipCount;
   ChipCounter(this.chipCount);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       decoration: BoxDecoration(
         color: Colors.black,

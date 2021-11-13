@@ -1,10 +1,11 @@
 import '../../pages/game/put_box.dart';
 import '../../types/api_models.dart' as model;
-import '../../components/hook_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class Board extends HookWidget {
+class Board extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Center(
       child: Column(
         children: [

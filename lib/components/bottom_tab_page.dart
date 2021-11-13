@@ -1,4 +1,5 @@
-import 'hook_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class TabSwitcher extends StateNotifier<int> {
   TabSwitcher() : super(0);
@@ -11,23 +12,23 @@ final provider = StateNotifierProvider<TabSwitcher, int>(
   (reference) => TabSwitcher(),
 );
 
-class BottomTabPage extends HookWidget {
+class BottomTabPage extends HookConsumerWidget {
   final List<Item> items;
   BottomTabPage(this.items);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return ProviderScope(child: TabBar(items));
   }
 }
 
-class TabBar extends HookWidget {
+class TabBar extends HookConsumerWidget {
   final List<Item> items;
   TabBar(this.items);
 
   @override
-  Widget build(BuildContext context) {
-    final index = useProvider(provider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final index = ref.watch(provider);
     final barItems = items.map(
       (item) => BottomNavigationBarItem(icon: item.icon, label: item.label),
     );
@@ -37,7 +38,7 @@ class TabBar extends HookWidget {
         items: barItems.toList(),
         currentIndex: index,
         onTap: (tappedIndex) {
-          final switcher = context.read(provider.notifier);
+          final switcher = ref.read(provider.notifier);
           switcher.switchTab(index: tappedIndex);
         },
         type: BottomNavigationBarType.fixed,

@@ -1,11 +1,12 @@
-import 'hook_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class SafeURLImage extends HookWidget {
+class SafeURLImage extends HookConsumerWidget {
   final String url;
   SafeURLImage(this.url);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       width: 120,
       height: 120,

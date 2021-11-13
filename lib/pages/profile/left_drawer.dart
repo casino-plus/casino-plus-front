@@ -1,10 +1,11 @@
 import '../../components/navigation_drawer.dart';
-import '../../components/hook_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../debug/debug.dart';
 
-class LeftDrawer extends HookWidget {
+class LeftDrawer extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return NavigationDrawer(
       [
         Item(
