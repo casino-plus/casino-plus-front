@@ -4,7 +4,6 @@ import 'dart:typed_data';
 import '../../types/api_models.dart';
 import 'package:file_picker/file_picker.dart';
 import '../../components/image_picker_view.dart';
-import '../../store/store.dart';
 import '../../utils/key_value_storage.dart';
 import '../../backend_client/create_user.dart' as CreateUser;
 
