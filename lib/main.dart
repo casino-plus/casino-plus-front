@@ -9,7 +9,7 @@ import 'pages/game/game.dart';
 
 void main() {
   runApp(
-    ProviderScope(
+    const ProviderScope(
       child: CasinoPlusApp(),
     ),
   );
