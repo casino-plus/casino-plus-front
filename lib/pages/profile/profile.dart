@@ -1,32 +1,31 @@
 import '../../components/user_name_plate.dart';
-import '../../store/store.dart';
-import '../../store/app_state.dart';
 import '../../components/chip_counter.dart';
 import 'left_drawer.dart';
-import '../../components/hook_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class Profile extends HookWidget {
+class Profile extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     debugPrint('プロフィール画面がビルドされました');
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile'),
+        title: const Text('Profile'),
       ),
       drawer: ProviderScope(
         child: LeftDrawer(),
       ),
       body: Column(
         children: [
-          Container(
+          const SizedBox(
             width: 300,
             height: 60,
-            child: UserNamePlate(store2.state.loginUser.nickname),
+            child: UserNamePlate('name'),
           ),
-          Container(
+          const SizedBox(
             width: 300,
             height: 60,
-            child: ChipCounter(store.state.loginUser.chip),
+            child: ChipCounter(50),
           ),
           TextButton(
             onPressed: () {

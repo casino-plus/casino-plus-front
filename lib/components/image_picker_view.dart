@@ -1,40 +1,86 @@
 import 'dart:typed_data';
-
-import 'hook_widget.dart';
-import 'package:file_picker/file_picker.dart';
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../../utils/image_picker.dart';
 
-class ImagePickerView extends HookWidget {
+class ImagePickerView extends HookConsumerWidget {
+  final double width;
+  final double height;
   final Widget placeHolder;
-  ImagePickerView(this.placeHolder, {this.onPickImage});
-  final imageBytes = useState<Uint8List?>(null);
-  final void Function(Uint8List imageBytes)? onPickImage;
+  final Uint8List? imageBytes;
+  final void Function(Uint8List imageBytes) onPickImage;
+  final void Function() onTapDelete;
+  final void Function(String reason)? onFailedPickImage;
+
+  const ImagePickerView({
+    this.width = 220,
+    this.height = 220,
+    required this.placeHolder,
+    required this.imageBytes,
+    required this.onPickImage,
+    required this.onTapDelete,
+    this.onFailedPickImage,
+  });
+
+  Widget imageArea() {
+    if (imageBytes == null) {
+      return Container(
+        width: width - 20,
+        height: height - 20,
+        padding: const EdgeInsets.all(20),
+        color: Colors.transparent,
+        child: placeHolder,
+      );
+    } else {
+      return Stack(
+        clipBehavior: Clip.none,
+        children: [
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                width: width,
+                height: height,
+                padding: const EdgeInsets.all(20),
+                color: Colors.transparent,
+                child: Image.memory(
+                  imageBytes!,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ],
+          ),
+          Positioned(
+            right: 0,
+            top: 0,
+            child: FloatingActionButton(
+              onPressed: () => onTapDelete(),
+              backgroundColor: Colors.blue,
+              child: const Icon(Icons.delete),
+            ),
+          ),
+        ],
+      );
+    }
+  }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return GestureDetector(
       onTap: () => onTap(context),
-      child: Container(
-        width: 200,
-        height: 200,
-        child: (imageBytes.value == null)
-            ? placeHolder
-            : Image.memory(
-                imageBytes.value!,
-                fit: BoxFit.cover,
-              ),
-      ),
+      child: imageArea(),
     );
   }
 
   void onTap(BuildContext context) async {
-    final file = await pickImage();
+    final file = await pickImage(onFailed: (reason) {
+      if (onFailedPickImage != null) {
+        onFailedPickImage!(reason);
+      }
+    });
     if (file == null) {
       return;
     }
-    imageBytes.value = file.bytes;
-    if (onPickImage != null) {
-      onPickImage!(file.bytes!);
-    }
+    onPickImage(file.bytes!);
   }
 }

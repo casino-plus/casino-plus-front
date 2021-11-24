@@ -1,12 +1,13 @@
-import 'hook_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class UserIcon extends HookWidget {
+class UserIcon extends HookConsumerWidget {
   final String iconURL;
   final double size;
   final double? cornerRadius;
   final Color? borderColor;
   final double? borderWidth;
-  UserIcon(
+  const UserIcon(
     this.iconURL, {
     this.size = 120,
     this.cornerRadius,
@@ -24,8 +25,29 @@ class UserIcon extends HookWidget {
     }
   }
 
+  Widget? image(String url) {
+    if (url.startsWith('assets/')) {
+      return Image.asset(
+        url,
+        fit: BoxFit.cover,
+      );
+    }
+    if (url.startsWith('http://') || url.startsWith('https://')) {
+      return Image.network(
+        url,
+        errorBuilder: (context, exception, stackTrace) {
+          return Image.asset(
+            'assets/images/guest.png',
+            fit: BoxFit.cover,
+          );
+        },
+      );
+    }
+    return null;
+  }
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
@@ -35,18 +57,10 @@ class UserIcon extends HookWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(
             cornerRadius != null ? cornerRadius! : size / 2.00),
-        child: Container(
+        child: SizedBox(
           width: size,
           height: size,
-          child: Image.network(
-            iconURL,
-            errorBuilder: (context, exception, stackTrace) {
-              return Image.asset(
-                'assets/images/guest.png',
-                fit: BoxFit.cover,
-              );
-            },
-          ),
+          child: image(iconURL),
         ),
       ),
     );

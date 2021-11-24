@@ -1,9 +1,9 @@
-import '../../types/api_models.dart' as model;
-import '../../components/hook_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class ScoreItem extends HookWidget {
+class ScoreItem extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    return Text('ScoreItem');
+  Widget build(BuildContext context, WidgetRef ref) {
+    return const Text('ScoreItem');
   }
 }

@@ -1,13 +1,12 @@
 import 'player.dart';
 import 'dock.dart';
 import 'board.dart';
-import '../../store/store.dart';
-import '../../types/api_models.dart' as Model;
-import '../../components/hook_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class Game extends HookWidget {
+class Game extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       body: Column(
         children: [
@@ -19,7 +18,7 @@ class Game extends HookWidget {
                   Player(),
                 ],
               ),
-              Container(
+              SizedBox(
                 width: 300,
                 height: 500,
                 child: Board(),
@@ -32,7 +31,7 @@ class Game extends HookWidget {
               ),
             ],
           ),
-          Container(
+          SizedBox(
             width: 300,
             height: 60,
             child: Dock(),

@@ -1,11 +1,12 @@
-import 'hook_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class NavigationDrawer extends HookWidget {
+class NavigationDrawer extends HookConsumerWidget {
   final List<Item> items;
-  NavigationDrawer(this.items);
+  const NavigationDrawer(this.items);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final tiles = items.map((item) => item.buildListTile(context));
     return Drawer(child: Column(children: tiles.toList()));
   }

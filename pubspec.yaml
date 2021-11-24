@@ -12,16 +12,26 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_riverpod:
-  hooks_riverpod:
-  intl:
-  http:
-  file_picker:
-  hive:
+  riverpod: 1.0.0-dev.10 # 状態管理ライブラリ
+  flutter_riverpod: 1.0.0-dev.10 # riverpod の flutter 連携部分
+  hooks_riverpod: 1.0.0-dev.10 # riverpod に hooks 機能を組み込む
+  intl: # Internationalization の略 多言語対応
+  http: # web通信
+  http_parser: # 通信パラメータのパース
+  json_annotation: ^4.3.0 # JSONシリアライズのアノテーション
+  freezed_annotation: # freezed のメタデータ付与部分
+  file_picker: # 端末からファイル選択
+  shared_preferences: # 簡易的なローカルDB
+  grouped_list: # セクション分け可能なリスト表示
+  flutter_chat_bubble: # チャットバブルの見た目
 
-dev_dependencies:
+dev_dependencies: # 開発時専用のパッケージ
   flutter_test:
     sdk: flutter
+  flutter_lints: # ソースコードの静的解析
+  build_runner: # コード生成補助
+  freezed: # immutable なクラスを作成
+  json_serializable: ^6.0.1 # JSONシリアライズ
 
 flutter:
   uses-material-design: true

@@ -6,8 +6,8 @@ enum WheelInner {
 }
 
 enum WheelOuter {
-  Qd,
-  Jc,
-  Ks,
-  Ah,
+  qd,
+  jc,
+  ks,
+  ah,
 }

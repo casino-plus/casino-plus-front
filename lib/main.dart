@@ -1,4 +1,5 @@
-import 'components/hook_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'components/bottom_tab_page.dart';
 import 'config/color_theme.dart';
 import 'pages/splash/splash.dart';
@@ -8,9 +9,9 @@ import 'pages/game/game.dart';
 
 void main() => runApp(CasinoPlusApp());
 
-class CasinoPlusApp extends HookWidget {
+class CasinoPlusApp extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
       title: 'Casino+',
       theme: colorTheme(),
@@ -20,8 +21,8 @@ class CasinoPlusApp extends HookWidget {
         '/': (context) => Splash(),
         '/home': (context) => BottomTabPage(
               [
-                Item('Profile', Icon(Icons.person), () => Profile()),
-                Item('Slot', Icon(Icons.computer), () => Slot()),
+                Item('Profile', const Icon(Icons.person), () => Profile()),
+                Item('Slot', const Icon(Icons.computer), () => Slot()),
               ],
             ),
         '/game': (context) => Game(),

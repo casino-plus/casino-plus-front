@@ -1,21 +1,50 @@
-import 'package:hive/hive.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-const BOX_NAME = 'KEY_VALUE_STORAGE';
+// ストレージ接続オブジェクトのキャッシュ
+SharedPreferences? _chacePrefs;
 
-Future<void> save<T>(String key, T value) async {
-  var box = await Hive.openBox(BOX_NAME);
-  await box.put(key, value);
-  return;
+// ストレージ接続オブジェクトの取得
+Future<SharedPreferences> getPrefs() async {
+  // null の場合のみキャッシュ生成
+  _chacePrefs ??= await SharedPreferences.getInstance();
+  return _chacePrefs!;
 }
 
-Future<T> load<T>(String key) async {
-  var box = await Hive.openBox(BOX_NAME);
-  T value = box.get(key);
-  return value;
+// int
+void saveInt(String key, int value) async {
+  final prefs = await getPrefs();
+  await prefs.setInt(key, value);
 }
 
-Future<void> delete() async {
-  var box = await Hive.openBox(BOX_NAME);
-  await box.delete('name');
-  return;
+Future<int?> loadInt(String key) async {
+  final prefs = await getPrefs();
+  prefs.getInt(key);
+}
+
+// String
+void saveString(String key, String value) async {
+  final prefs = await getPrefs();
+  await prefs.setString(key, value);
+}
+
+Future<String?> loadString(String key) async {
+  final prefs = await getPrefs();
+  return prefs.getString(key);
+}
+
+// String List
+void saveStringList(String key, List<String> values) async {
+  final prefs = await getPrefs();
+  await prefs.setStringList(key, values);
+}
+
+Future<List<String>?> loadStringList(String key) async {
+  final prefs = await getPrefs();
+  return prefs.getStringList(key);
+}
+
+// remove
+void remove(String key) async {
+  final prefs = await getPrefs();
+  await prefs.remove(key);
 }

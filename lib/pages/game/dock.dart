@@ -1,11 +1,11 @@
 import '../../components/game_card.dart';
-import '../../types/api_models.dart' as model;
-import '../../components/hook_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class Dock extends HookWidget {
+class Dock extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    return Container(
+  Widget build(BuildContext context, WidgetRef ref) {
+    return SizedBox(
       height: 60,
       child: Row(
         children: [

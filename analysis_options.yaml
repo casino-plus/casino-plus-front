@@ -1,1 +1,11 @@
-include: package:pedantic/analysis_options.yaml
+# flutter analyze でコマンドから実行可能
+
+# dart fix --dry-run dart 組み込み機能で修正可能なリストを表示
+
+# dart fix --apply 実際に auto fix する
+
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - lib/types/*

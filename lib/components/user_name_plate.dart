@@ -1,12 +1,12 @@
-import '../store/store.dart';
-import 'hook_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class UserNamePlate extends HookWidget {
-  final name;
-  UserNamePlate(this.name);
+class UserNamePlate extends HookConsumerWidget {
+  final String name;
+  const UserNamePlate(this.name);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       decoration: BoxDecoration(
         color: Colors.black,

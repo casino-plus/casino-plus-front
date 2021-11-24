@@ -1,29 +1,29 @@
 import '../../pages/game/put_box.dart';
-import '../../types/api_models.dart' as model;
-import '../../components/hook_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class Board extends HookWidget {
+class Board extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Center(
       child: Column(
         children: [
           Row(
             children: [
               PutBox(),
-              Spacer(),
+              const Spacer(),
               PutBox(),
             ],
           ),
           Stack(
             alignment: Alignment.center,
             children: [
-              Container(
+              SizedBox(
                 width: 200,
                 height: 200,
                 child: Image.asset('assets/images/wheel-outer.png'),
               ),
-              Container(
+              SizedBox(
                 width: 100,
                 height: 100,
                 child: Image.asset('assets/images/wheel-inner.png'),
@@ -33,7 +33,7 @@ class Board extends HookWidget {
           Row(
             children: [
               PutBox(),
-              Spacer(),
+              const Spacer(),
               PutBox(),
             ],
           ),

@@ -1,7 +1,7 @@
 enum AnnounceType {
-  BetStart,
-  PutStart,
-  PutAction,
-  NewPlayerEnter,
-  PlayerLeave,
+  betStart,
+  putStart,
+  putAction,
+  newPlayerEnter,
+  playerLeave,
 }
