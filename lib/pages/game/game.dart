@@ -1,6 +1,10 @@
 import 'player.dart';
 import 'dock.dart';
 import 'board.dart';
+<<<<<<< HEAD
+=======
+import '../../state/game.dart' as game_state;
+>>>>>>> 20748ce2387ff8c184d6531269a103934a705fd1
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 

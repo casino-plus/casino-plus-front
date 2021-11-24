@@ -7,7 +7,13 @@ import 'pages/profile/profile.dart';
 import 'pages/slot/slot.dart';
 import 'pages/game/game.dart';
 
-void main() => runApp(CasinoPlusApp());
+void main() {
+  runApp(
+    ProviderScope(
+      child: CasinoPlusApp(),
+    ),
+  );
+}
 
 class CasinoPlusApp extends HookConsumerWidget {
   @override

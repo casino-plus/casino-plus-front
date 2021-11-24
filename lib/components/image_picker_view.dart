@@ -1,11 +1,12 @@
-import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../../utils/image_picker.dart';
+import 'dart:typed_data';
 
 class ImagePickerView extends HookConsumerWidget {
   final double width;
   final double height;
+
   final Widget placeHolder;
   final Uint8List? imageBytes;
   final void Function(Uint8List imageBytes) onPickImage;
@@ -78,6 +79,7 @@ class ImagePickerView extends HookConsumerWidget {
         onFailedPickImage!(reason);
       }
     });
+
     if (file == null) {
       return;
     }

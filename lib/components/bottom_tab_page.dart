@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
 import 'package:flutter_hooks/flutter_hooks.dart';
 
 class BottomTabPage extends HookConsumerWidget {
@@ -9,6 +10,7 @@ class BottomTabPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final index = useState(0);
+
     final barItems = items.map(
       (item) => BottomNavigationBarItem(icon: item.icon, label: item.label),
     );

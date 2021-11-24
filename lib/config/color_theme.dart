@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 ThemeData colorTheme() {
   final base = ThemeData.dark();
   return base.copyWith(
+<<<<<<< HEAD
     backgroundColor: const Color(0xFF006400), // 背景色
+=======
+    backgroundColor: Color(0xFF006400), // 背景色
+>>>>>>> 20748ce2387ff8c184d6531269a103934a705fd1
     bottomAppBarColor: Colors.black, // フッターの色
     canvasColor: Colors.black, // キャンバスの色
     cardColor: const Color(0xFFFF0800), // カードの色

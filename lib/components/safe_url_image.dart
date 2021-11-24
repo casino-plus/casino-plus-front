@@ -5,6 +5,7 @@ class SafeURLImage extends HookConsumerWidget {
   final String url;
   const SafeURLImage(this.url);
 
+<<<<<<< HEAD
   Widget? image(String url) {
     if (url.startsWith('assets/')) {
       return Image.asset(
@@ -14,6 +15,14 @@ class SafeURLImage extends HookConsumerWidget {
     }
     if (url.startsWith('http://') || url.startsWith('https://')) {
       return Image.network(
+=======
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return Container(
+      width: 120,
+      height: 120,
+      child: Image.network(
+>>>>>>> 20748ce2387ff8c184d6531269a103934a705fd1
         url,
         errorBuilder: (context, exception, stackTrace) {
           return Image.asset(

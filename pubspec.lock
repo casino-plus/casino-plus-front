@@ -106,6 +106,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.3.1"
+<<<<<<< HEAD
   checked_yaml:
     dependency: transitive
     description:
@@ -120,6 +121,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.5"
+=======
+>>>>>>> 20748ce2387ff8c184d6531269a103934a705fd1
   clock:
     dependency: transitive
     description:
@@ -216,6 +219,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.18.1"
+<<<<<<< HEAD
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -223,6 +227,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.4"
+=======
+>>>>>>> 20748ce2387ff8c184d6531269a103934a705fd1
   flutter_plugin_android_lifecycle:
     dependency: transitive
     description:
@@ -247,6 +253,7 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< HEAD
   freezed:
     dependency: "direct dev"
     description:
@@ -283,6 +290,9 @@ packages:
     source: hosted
     version: "2.1.0"
   grouped_list:
+=======
+  hive:
+>>>>>>> 20748ce2387ff8c184d6531269a103934a705fd1
     dependency: "direct main"
     description:
       name: grouped_list
@@ -338,6 +348,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.3"
+<<<<<<< HEAD
   json_annotation:
     dependency: "direct main"
     description:
@@ -366,6 +377,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.2"
+=======
+>>>>>>> 20748ce2387ff8c184d6531269a103934a705fd1
   matcher:
     dependency: transitive
     description:
@@ -380,6 +393,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
+<<<<<<< HEAD
   mime:
     dependency: transitive
     description:
@@ -394,6 +408,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.2"
+=======
+>>>>>>> 20748ce2387ff8c184d6531269a103934a705fd1
   path:
     dependency: transitive
     description:
@@ -443,6 +459,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.1"
+<<<<<<< HEAD
   pool:
     dependency: transitive
     description:
@@ -452,6 +469,10 @@ packages:
     version: "1.5.0"
   process:
     dependency: transitive
+=======
+  riverpod:
+    dependency: "direct main"
+>>>>>>> 20748ce2387ff8c184d6531269a103934a705fd1
     description:
       name: process
       url: "https://pub.dartlang.org"
@@ -478,6 +499,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.0-dev.10"
+<<<<<<< HEAD
   shared_preferences:
     dependency: "direct main"
     description:
@@ -548,6 +570,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.1"
+=======
+>>>>>>> 20748ce2387ff8c184d6531269a103934a705fd1
   sky_engine:
     dependency: transitive
     description: flutter
@@ -623,6 +647,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.4.2"
+<<<<<<< HEAD
   timing:
     dependency: transitive
     description:
@@ -630,6 +655,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.0"
+=======
+>>>>>>> 20748ce2387ff8c184d6531269a103934a705fd1
   typed_data:
     dependency: transitive
     description:
