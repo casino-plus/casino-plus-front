@@ -12,7 +12,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-<<<<<<< HEAD
   riverpod: 1.0.0-dev.10 # 状態管理ライブラリ
   flutter_riverpod: 1.0.0-dev.10 # riverpod の flutter 連携部分
   hooks_riverpod: 1.0.0-dev.10 # riverpod に hooks 機能を組み込む
@@ -25,15 +24,6 @@ dependencies:
   shared_preferences: # 簡易的なローカルDB
   grouped_list: # セクション分け可能なリスト表示
   flutter_chat_bubble: # チャットバブルの見た目
-=======
-  flutter_riverpod: 1.0.0-dev.10
-  hooks_riverpod: 1.0.0-dev.10
-  riverpod: 1.0.0-dev.10
-  intl:
-  http:
-  file_picker:
-  hive:
->>>>>>> 20748ce2387ff8c184d6531269a103934a705fd1
 
 dev_dependencies: # 開発時専用のパッケージ
   flutter_test:

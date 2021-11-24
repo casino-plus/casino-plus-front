@@ -2,13 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class UserNamePlate extends HookConsumerWidget {
-<<<<<<< HEAD
   final String name;
   const UserNamePlate(this.name);
-=======
-  final name;
-  UserNamePlate(this.name);
->>>>>>> 20748ce2387ff8c184d6531269a103934a705fd1
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

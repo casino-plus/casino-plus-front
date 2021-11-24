@@ -1,6 +1,6 @@
 import '../types/upload_config.dart';
 
-import '../client/get_upload_config.dart' as api;
+import '../backend_client/get_upload_config.dart' as api;
 
 api.Response getResponse() {
   final uploadConfig = UploadConfig(
