@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'dart:typed_data';
 import '../../types/api_models.dart';
-import 'package:file_picker/file_picker.dart';
 import '../../components/image_picker_view.dart';
-import '../../utils/key_value_storage.dart';
-import '../../backend_client/create_user.dart' as CreateUser;
+import '../../center_client/create_user.dart' as create_user;
 
 class Debug extends HookConsumerWidget {
   @override
@@ -13,11 +11,14 @@ class Debug extends HookConsumerWidget {
     return Column(
       children: [
         ImagePickerView(
-          Text('Select Image'),
-          onPickImage: onPickImage,
+          placeHolder: Text('ここをタップして画像を選択'),
+          onTapDelete: () => {},
+          onPickImage: (bytes) => {},
+          onFailedPickImage: (err) => {},
+          imageBytes: null,
         ),
         TextButton(
-          onPressed: onPressed2,
+          onPressed: onPressed,
           child: Text('Debug2'),
         ),
       ],
@@ -31,9 +32,9 @@ void onPickImage(Uint8List imageBytes) async {
   img = imageBytes;
 }
 
-void onPressed2() async {
+void onPressed() async {
   final user = User('testmail', 'testname');
-  final req = CreateUser.Request(user);
-  final res = await CreateUser.sendRequest(req, img!);
+  final req = create_user.Request(user);
+  final res = await create_user.sendRequest(req, img!);
   debugPrint(res.user!.iconURL);
 }

@@ -1,6 +1,6 @@
-name: casino_plus_app
+name: casino_plus
 
-description: カジノ+ アプリ
+description: シンプルで簡単なカジノゲーム
 
 publish_to: "none"
 
@@ -12,19 +12,37 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_riverpod: 1.0.0-dev.10
-  hooks_riverpod: 1.0.0-dev.10
-  riverpod: 1.0.0-dev.10
-  intl:
-  http:
-  file_picker:
-  hive:
+  riverpod: 1.0.0-dev.10 # 状態管理ライブラリ
+  flutter_riverpod: 1.0.0-dev.10 # riverpod の flutter 連携部分
+  hooks_riverpod: 1.0.0-dev.10 # riverpod に hooks 機能を組み込む
+  intl: # Internationalization の略 多言語対応
+  http: # web通信
+  http_parser: # 通信パラメータのパース
+  json_annotation: # JSONシリアライズのアノテーション
+  freezed_annotation: # freezed のメタデータ付与部分
+  file_picker: # 端末からファイル選択
+  shared_preferences: # 簡易的なローカルDB
+  flutter_launcher_icons: # アプリアイコン
+  flutter_native_splash: # ネイティブのスプラッシュ画面
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner: # コード生成補助
+  freezed: # immutable なクラスを作成
+  json_serializable: # JSONシリアライズ
 
 flutter:
   uses-material-design: true
   assets:
     - assets/images/
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/appicon.png"
+
+flutter_native_splash:
+  color: "#42a5f5"
+  branding: assets/images/splash.png
+  branding_mode: bottom

@@ -25,20 +25,34 @@ $ flutter run -d all
 <br>
 
 ## ソースコード
+
 - ./lib
 
 <br>
 
 ## 技術
+
 - Flutter フレームワーク
 - Dart プログラミング言語
 
 <br>
 
-## 依存パッケージ
+## 開発メモ
 
-- flutter_riverpod
-- hooks_riverpod
-- intl
-- http
-- file_picker
+- データクラスの生成(freezed)
+
+```
+$ flutter pub run build_runner build --delete-conflicting-outputs
+```
+
+- アプリアイコンの生成 (flutter_launcher_icons)
+
+```
+$ flutter pub run flutter_launcher_icons:main
+```
+
+- スプラッシュ画面
+
+```
+$ flutter pub run flutter_native_splash:create
+```
