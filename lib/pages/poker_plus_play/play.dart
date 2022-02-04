@@ -1,7 +1,6 @@
 import 'player.dart';
 import 'dock.dart';
 import 'board.dart';
-import '../../state/game.dart' as game_state;
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -19,7 +18,7 @@ class Play extends HookConsumerWidget {
                   Player(),
                 ],
               ),
-              Container(
+              SizedBox(
                 width: 300,
                 height: 500,
                 child: Board(),
@@ -32,7 +31,7 @@ class Play extends HookConsumerWidget {
               ),
             ],
           ),
-          Container(
+          SizedBox(
             width: 300,
             height: 60,
             child: Dock(),

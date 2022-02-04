@@ -9,7 +9,7 @@ class Splash extends HookConsumerWidget {
         onPressed: () {
           Navigator.pushNamed(context, '/home');
         },
-        child: Text('from this Splash to Home'),
+        child: const Text('from this Splash to Home'),
       ),
     );
   }

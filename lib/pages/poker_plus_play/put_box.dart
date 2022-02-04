@@ -1,11 +1,10 @@
-import '../../types/api_models.dart' as model;
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class PutBox extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Container(
+    return SizedBox(
       width: 80,
       height: 80,
       child: Stack(

@@ -3,7 +3,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class ChipCounter extends HookConsumerWidget {
   final int chipCount;
-  ChipCounter(this.chipCount);
+  const ChipCounter(this.chipCount);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

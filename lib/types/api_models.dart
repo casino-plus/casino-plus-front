@@ -65,32 +65,32 @@ class Game {
 
 class Player {
   final int seat;
-  final String player_id;
+  final String playerId;
   final String nickname;
-  final String icon_url;
+  final String iconUrl;
   final String step;
   final int chip;
   Player(
     this.seat,
-    this.player_id,
+    this.playerId,
     this.nickname,
-    this.icon_url,
+    this.iconUrl,
     this.step,
     this.chip,
   );
   Player.fromJson(dynamic json)
       : seat = json['seat'],
-        player_id = json['player_id'],
+        playerId = json['player_id'],
         nickname = json['nickname'],
-        icon_url = json['nickname'],
+        iconUrl = json['nickname'],
         step = json['step'],
         chip = json['chip'];
   dynamic toJson() {
     return {
       'seat': seat,
-      'player_id': player_id,
+      'player_id': playerId,
       'nickname': nickname,
-      'icon_url': icon_url,
+      'icon_url': iconUrl,
       'step': step,
       'chip': chip,
     };
@@ -98,61 +98,61 @@ class Player {
 }
 
 class Board {
-  final List<BetBox> bet_boxes;
-  final List<PutBox> put_boxes;
-  final int inner_offset;
-  final int outer_offset;
+  final List<BetBox> betBoxes;
+  final List<PutBox> putBoxes;
+  final int innerOffset;
+  final int outerOffset;
   const Board(
-    this.bet_boxes,
-    this.put_boxes,
-    this.inner_offset,
-    this.outer_offset,
+    this.betBoxes,
+    this.putBoxes,
+    this.innerOffset,
+    this.outerOffset,
   );
   Board.fromJson(dynamic json)
-      : bet_boxes = List<dynamic>.from(json['bet_boxes'])
+      : betBoxes = List<dynamic>.from(json['bet_boxes'])
             .map((e) => BetBox.fromJson(e))
             .toList(),
-        put_boxes = List<dynamic>.from(json['put_boxes'])
+        putBoxes = List<dynamic>.from(json['put_boxes'])
             .map((e) => PutBox.fromJson(e))
             .toList(),
-        inner_offset = json['inner_offset'],
-        outer_offset = json['outer_offset'];
+        innerOffset = json['inner_offset'],
+        outerOffset = json['outer_offset'];
   dynamic toJson() {
     return {
-      'bet_boxes': bet_boxes.map((e) => e.toJson()),
-      'put_boxes': put_boxes.map((e) => e.toJson()),
-      'inner_offset': inner_offset,
-      'outer_offset': outer_offset,
+      'bet_boxes': betBoxes.map((e) => e.toJson()),
+      'put_boxes': putBoxes.map((e) => e.toJson()),
+      'inner_offset': innerOffset,
+      'outer_offset': outerOffset,
     };
   }
 }
 
 class BetBox {
   final int seat;
-  final String? bet_level;
-  BetBox(this.seat, this.bet_level);
+  final String? betLevel;
+  BetBox(this.seat, this.betLevel);
   BetBox.fromJson(dynamic json)
       : seat = json['seat'],
-        bet_level = json['bet_level'];
+        betLevel = json['bet_level'];
   dynamic toJson() {
     return {
       'seat': seat,
-      'bet_level': bet_level,
+      'bet_level': betLevel,
     };
   }
 }
 
 class PutBox {
   final int seat;
-  final bool has_card;
-  PutBox(this.seat, this.has_card);
+  final bool hasCard;
+  PutBox(this.seat, this.hasCard);
   PutBox.fromJson(dynamic json)
       : seat = json['seat'],
-        has_card = json['has_card'];
+        hasCard = json['has_card'];
   dynamic toJson() {
     return {
       'seat': seat,
-      'has_card': has_card,
+      'has_card': hasCard,
     };
   }
 }
@@ -170,95 +170,95 @@ class Dock {
 
 class ShowdownAnimation {
   final int seat;
-  final String put_card;
-  final int old_inner_offset;
-  final int? new_inner_offset;
-  final int old_outer_offset;
-  final int? new_outer_offset;
+  final String putCard;
+  final int oldInnerOffset;
+  final int? newInnerOffset;
+  final int oldOuterOffset;
+  final int? newOuterOffset;
   ShowdownAnimation(
     this.seat,
-    this.put_card,
-    this.old_inner_offset,
-    this.new_inner_offset,
-    this.old_outer_offset,
-    this.new_outer_offset,
+    this.putCard,
+    this.oldInnerOffset,
+    this.newInnerOffset,
+    this.oldOuterOffset,
+    this.newOuterOffset,
   );
   ShowdownAnimation.fromJson(dynamic json)
       : seat = json['seat'],
-        put_card = json['put_card'],
-        old_inner_offset = json['old_inner_offset'],
-        new_inner_offset = json['new_inner_offset'],
-        old_outer_offset = json['old_outer_offset'],
-        new_outer_offset = json['new_outer_offset'];
+        putCard = json['put_card'],
+        oldInnerOffset = json['old_inner_offset'],
+        newInnerOffset = json['new_inner_offset'],
+        oldOuterOffset = json['old_outer_offset'],
+        newOuterOffset = json['new_outer_offset'];
   dynamic toJson() {
     return {
       'seat': seat,
-      'put_card': put_card,
-      'old_inner_offset': old_inner_offset,
-      'new_inner_offset': new_inner_offset,
-      'old_outer_offset': old_outer_offset,
-      'new_outer_offset': new_outer_offset,
+      'put_card': putCard,
+      'old_inner_offset': oldInnerOffset,
+      'new_inner_offset': newInnerOffset,
+      'old_outer_offset': oldOuterOffset,
+      'new_outer_offset': newOuterOffset,
     };
   }
 }
 
 class Score {
-  final String player_id;
+  final String playerId;
   final String nickname;
-  final int old_total_chip;
-  final int bonus_chip;
-  final int new_total_chip;
-  final String put_card;
+  final int oldTotalChip;
+  final int bonusChip;
+  final int newTotalChip;
+  final String putCard;
   final String inner;
   final String outer;
-  final String combo_name;
+  final String comboName;
   Score(
-    this.player_id,
+    this.playerId,
     this.nickname,
-    this.old_total_chip,
-    this.bonus_chip,
-    this.new_total_chip,
-    this.put_card,
+    this.oldTotalChip,
+    this.bonusChip,
+    this.newTotalChip,
+    this.putCard,
     this.inner,
     this.outer,
-    this.combo_name,
+    this.comboName,
   );
   Score.fromJson(dynamic json)
-      : player_id = json['player_id'],
+      : playerId = json['player_id'],
         nickname = json['nickname'],
-        old_total_chip = json['old_total_chip'],
-        bonus_chip = json['bonus_chip'],
-        new_total_chip = json['new_total_chip'],
-        put_card = json['put_card'],
+        oldTotalChip = json['old_total_chip'],
+        bonusChip = json['bonus_chip'],
+        newTotalChip = json['new_total_chip'],
+        putCard = json['put_card'],
         inner = json['inner'],
         outer = json['outer'],
-        combo_name = json['combo_name'];
+        comboName = json['combo_name'];
   dynamic toJson() {
     return {
-      'player_id': player_id,
+      'player_id': playerId,
       'nickname': nickname,
-      'old_total_chip': old_total_chip,
-      'bonus_chip': bonus_chip,
-      'new_total_chip': new_total_chip,
-      'put_card': put_card,
+      'old_total_chip': oldTotalChip,
+      'bonus_chip': bonusChip,
+      'new_total_chip': newTotalChip,
+      'put_card': putCard,
       'inner': inner,
       'outer': outer,
-      'combo_name': combo_name,
+      'combo_name': comboName,
     };
   }
 }
 
 class Announce {
-  final String announce_type;
+  final String announceType;
   final Game game;
-  final int? trigger_seat;
-  final List<ShowdownAnimation>? showdown_list;
-  final List<Score>? score_list;
+  final int? triggerSeat;
+  final List<ShowdownAnimation>? showdownList;
+  final List<Score>? scoreList;
   Announce(
-    this.announce_type,
+    this.announceType,
     this.game,
-    this.trigger_seat,
-    this.showdown_list,
-    this.score_list,
+    this.triggerSeat,
+    this.showdownList,
+    this.scoreList,
   );
 }

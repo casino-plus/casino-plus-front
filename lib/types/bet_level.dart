@@ -1,5 +1,5 @@
 enum BetLevel {
-  Min,
-  Mid,
-  Max,
+  min,
+  mid,
+  max,
 }

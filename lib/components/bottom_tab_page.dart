@@ -1,45 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class TabSwitcher extends StateNotifier<int> {
-  TabSwitcher() : super(0);
-  void switchTab({required int index}) {
-    state = index;
-  }
-}
-
-final provider = StateNotifierProvider<TabSwitcher, int>(
-  (reference) => TabSwitcher(),
-);
+import 'package:flutter_hooks/flutter_hooks.dart';
 
 class BottomTabPage extends HookConsumerWidget {
   final List<Item> items;
-  BottomTabPage(this.items);
+  const BottomTabPage(this.items);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return ProviderScope(child: TabBar(items));
-  }
-}
+    final index = useState(0);
 
-class TabBar extends HookConsumerWidget {
-  final List<Item> items;
-  TabBar(this.items);
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final index = ref.watch(provider);
     final barItems = items.map(
       (item) => BottomNavigationBarItem(icon: item.icon, label: item.label),
     );
     return Scaffold(
-      body: items[index].buildBody(),
+      body: items[index.value].buildBody(),
       bottomNavigationBar: BottomNavigationBar(
         items: barItems.toList(),
-        currentIndex: index,
+        currentIndex: index.value,
         onTap: (tappedIndex) {
-          final switcher = ref.read(provider.notifier);
-          switcher.switchTab(index: tappedIndex);
+          index.value = tappedIndex;
         },
         type: BottomNavigationBarType.fixed,
       ),

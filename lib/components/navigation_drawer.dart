@@ -3,7 +3,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class NavigationDrawer extends HookConsumerWidget {
   final List<Item> items;
-  NavigationDrawer(this.items);
+  const NavigationDrawer(this.items);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
