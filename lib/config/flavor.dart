@@ -3,13 +3,13 @@
 //
 
 enum Flavor {
-  Develop, // ローカルサーバー環境
-  Staging, // オンラインの練習サーバー環境
-  Production, // オンラインの本番サーバー環境
+  develop, // ローカルサーバー環境
+  staging, // オンラインの練習サーバー環境
+  production, // オンラインの本番サーバー環境
 }
 
 // 指定が無いときの接続環境
-const defaultFlavor = Flavor.Develop;
+const defaultFlavor = Flavor.develop;
 
 // 指定が有るときの接続環境
 final Flavor flavor = () {
@@ -17,11 +17,11 @@ final Flavor flavor = () {
   const flavorString = String.fromEnvironment('FLAVOR');
   switch (flavorString) {
     case 'develop':
-      return Flavor.Develop;
+      return Flavor.develop;
     case 'staging':
-      return Flavor.Staging;
+      return Flavor.staging;
     case 'production':
-      return Flavor.Production;
+      return Flavor.production;
     default:
       return defaultFlavor;
   }

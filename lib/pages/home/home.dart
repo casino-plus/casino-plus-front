@@ -9,8 +9,8 @@ class Home extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return BottomTabPage(
       [
-        Item('Profile', Icon(Icons.person), () => Profile()),
-        Item('Slot', Icon(Icons.computer), () => Slot()),
+        Item('Profile', const Icon(Icons.person), () => Profile()),
+        Item('Slot', const Icon(Icons.computer), () => Slot()),
       ],
     );
   }

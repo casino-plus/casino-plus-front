@@ -16,24 +16,24 @@ class FlavorConfig {
   });
 }
 
-final List<FlavorConfig> flavorConfigs = [
+const List<FlavorConfig> flavorConfigs = [
   // Develop
   FlavorConfig(
-    flavor: Flavor.Develop,
+    flavor: Flavor.develop,
     appClientID: 'none',
     ceterHostUrl: 'no-host',
     shouldUseStub: true,
   ),
   // Staging
   FlavorConfig(
-    flavor: Flavor.Staging,
+    flavor: Flavor.staging,
     appClientID: 'sampleclientid.ios',
     ceterHostUrl: 'http://localhost:3000',
     shouldUseStub: false,
   ),
   // Production
   FlavorConfig(
-    flavor: Flavor.Production,
+    flavor: Flavor.production,
     appClientID: 'sampleclientid.browser',
     ceterHostUrl: 'https://.com',
     shouldUseStub: false,

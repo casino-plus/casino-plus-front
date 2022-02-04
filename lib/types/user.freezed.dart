@@ -24,14 +24,24 @@ class _$UserTearOff {
 
   _User call(
       {required int id,
-      required String name,
-      @JsonKey(name: 'icon_url') required String iconURL,
-      required String selfIntro}) {
+      required String mail,
+      required String nickname,
+      required String iconUrl,
+      required int chips,
+      required List<SymbolPocket> symbolPockets,
+      required String selfIntro,
+      required DateTime createdAt,
+      required DateTime updatedAt}) {
     return _User(
       id: id,
-      name: name,
-      iconURL: iconURL,
+      mail: mail,
+      nickname: nickname,
+      iconUrl: iconUrl,
+      chips: chips,
+      symbolPockets: symbolPockets,
       selfIntro: selfIntro,
+      createdAt: createdAt,
+      updatedAt: updatedAt,
     );
   }
 
@@ -46,10 +56,14 @@ const $User = _$UserTearOff();
 /// @nodoc
 mixin _$User {
   int get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  @JsonKey(name: 'icon_url')
-  String get iconURL => throw _privateConstructorUsedError;
+  String get mail => throw _privateConstructorUsedError;
+  String get nickname => throw _privateConstructorUsedError;
+  String get iconUrl => throw _privateConstructorUsedError;
+  int get chips => throw _privateConstructorUsedError;
+  List<SymbolPocket> get symbolPockets => throw _privateConstructorUsedError;
   String get selfIntro => throw _privateConstructorUsedError;
+  DateTime get createdAt => throw _privateConstructorUsedError;
+  DateTime get updatedAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -62,9 +76,14 @@ abstract class $UserCopyWith<$Res> {
       _$UserCopyWithImpl<$Res>;
   $Res call(
       {int id,
-      String name,
-      @JsonKey(name: 'icon_url') String iconURL,
-      String selfIntro});
+      String mail,
+      String nickname,
+      String iconUrl,
+      int chips,
+      List<SymbolPocket> symbolPockets,
+      String selfIntro,
+      DateTime createdAt,
+      DateTime updatedAt});
 }
 
 /// @nodoc
@@ -78,27 +97,52 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
   @override
   $Res call({
     Object? id = freezed,
-    Object? name = freezed,
-    Object? iconURL = freezed,
+    Object? mail = freezed,
+    Object? nickname = freezed,
+    Object? iconUrl = freezed,
+    Object? chips = freezed,
+    Object? symbolPockets = freezed,
     Object? selfIntro = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
+      mail: mail == freezed
+          ? _value.mail
+          : mail // ignore: cast_nullable_to_non_nullable
               as String,
-      iconURL: iconURL == freezed
-          ? _value.iconURL
-          : iconURL // ignore: cast_nullable_to_non_nullable
+      nickname: nickname == freezed
+          ? _value.nickname
+          : nickname // ignore: cast_nullable_to_non_nullable
               as String,
+      iconUrl: iconUrl == freezed
+          ? _value.iconUrl
+          : iconUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      chips: chips == freezed
+          ? _value.chips
+          : chips // ignore: cast_nullable_to_non_nullable
+              as int,
+      symbolPockets: symbolPockets == freezed
+          ? _value.symbolPockets
+          : symbolPockets // ignore: cast_nullable_to_non_nullable
+              as List<SymbolPocket>,
       selfIntro: selfIntro == freezed
           ? _value.selfIntro
           : selfIntro // ignore: cast_nullable_to_non_nullable
               as String,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -110,9 +154,14 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   @override
   $Res call(
       {int id,
-      String name,
-      @JsonKey(name: 'icon_url') String iconURL,
-      String selfIntro});
+      String mail,
+      String nickname,
+      String iconUrl,
+      int chips,
+      List<SymbolPocket> symbolPockets,
+      String selfIntro,
+      DateTime createdAt,
+      DateTime updatedAt});
 }
 
 /// @nodoc
@@ -127,27 +176,52 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? name = freezed,
-    Object? iconURL = freezed,
+    Object? mail = freezed,
+    Object? nickname = freezed,
+    Object? iconUrl = freezed,
+    Object? chips = freezed,
+    Object? symbolPockets = freezed,
     Object? selfIntro = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
   }) {
     return _then(_User(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
+      mail: mail == freezed
+          ? _value.mail
+          : mail // ignore: cast_nullable_to_non_nullable
               as String,
-      iconURL: iconURL == freezed
-          ? _value.iconURL
-          : iconURL // ignore: cast_nullable_to_non_nullable
+      nickname: nickname == freezed
+          ? _value.nickname
+          : nickname // ignore: cast_nullable_to_non_nullable
               as String,
+      iconUrl: iconUrl == freezed
+          ? _value.iconUrl
+          : iconUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      chips: chips == freezed
+          ? _value.chips
+          : chips // ignore: cast_nullable_to_non_nullable
+              as int,
+      symbolPockets: symbolPockets == freezed
+          ? _value.symbolPockets
+          : symbolPockets // ignore: cast_nullable_to_non_nullable
+              as List<SymbolPocket>,
       selfIntro: selfIntro == freezed
           ? _value.selfIntro
           : selfIntro // ignore: cast_nullable_to_non_nullable
               as String,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -158,9 +232,14 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 class _$_User extends _User {
   _$_User(
       {required this.id,
-      required this.name,
-      @JsonKey(name: 'icon_url') required this.iconURL,
-      required this.selfIntro})
+      required this.mail,
+      required this.nickname,
+      required this.iconUrl,
+      required this.chips,
+      required this.symbolPockets,
+      required this.selfIntro,
+      required this.createdAt,
+      required this.updatedAt})
       : super._();
 
   factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
@@ -168,16 +247,25 @@ class _$_User extends _User {
   @override
   final int id;
   @override
-  final String name;
+  final String mail;
   @override
-  @JsonKey(name: 'icon_url')
-  final String iconURL;
+  final String nickname;
+  @override
+  final String iconUrl;
+  @override
+  final int chips;
+  @override
+  final List<SymbolPocket> symbolPockets;
   @override
   final String selfIntro;
+  @override
+  final DateTime createdAt;
+  @override
+  final DateTime updatedAt;
 
   @override
   String toString() {
-    return 'User(id: $id, name: $name, iconURL: $iconURL, selfIntro: $selfIntro)';
+    return 'User(id: $id, mail: $mail, nickname: $nickname, iconUrl: $iconUrl, chips: $chips, symbolPockets: $symbolPockets, selfIntro: $selfIntro, createdAt: $createdAt, updatedAt: $updatedAt)';
   }
 
   @override
@@ -186,18 +274,29 @@ class _$_User extends _User {
         (other.runtimeType == runtimeType &&
             other is _User &&
             const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.iconURL, iconURL) &&
-            const DeepCollectionEquality().equals(other.selfIntro, selfIntro));
+            const DeepCollectionEquality().equals(other.mail, mail) &&
+            const DeepCollectionEquality().equals(other.nickname, nickname) &&
+            const DeepCollectionEquality().equals(other.iconUrl, iconUrl) &&
+            const DeepCollectionEquality().equals(other.chips, chips) &&
+            const DeepCollectionEquality()
+                .equals(other.symbolPockets, symbolPockets) &&
+            const DeepCollectionEquality().equals(other.selfIntro, selfIntro) &&
+            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
+            const DeepCollectionEquality().equals(other.updatedAt, updatedAt));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(iconURL),
-      const DeepCollectionEquality().hash(selfIntro));
+      const DeepCollectionEquality().hash(mail),
+      const DeepCollectionEquality().hash(nickname),
+      const DeepCollectionEquality().hash(iconUrl),
+      const DeepCollectionEquality().hash(chips),
+      const DeepCollectionEquality().hash(symbolPockets),
+      const DeepCollectionEquality().hash(selfIntro),
+      const DeepCollectionEquality().hash(createdAt),
+      const DeepCollectionEquality().hash(updatedAt));
 
   @JsonKey(ignore: true)
   @override
@@ -213,9 +312,14 @@ class _$_User extends _User {
 abstract class _User extends User {
   factory _User(
       {required int id,
-      required String name,
-      @JsonKey(name: 'icon_url') required String iconURL,
-      required String selfIntro}) = _$_User;
+      required String mail,
+      required String nickname,
+      required String iconUrl,
+      required int chips,
+      required List<SymbolPocket> symbolPockets,
+      required String selfIntro,
+      required DateTime createdAt,
+      required DateTime updatedAt}) = _$_User;
   _User._() : super._();
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
@@ -223,12 +327,21 @@ abstract class _User extends User {
   @override
   int get id;
   @override
-  String get name;
+  String get mail;
   @override
-  @JsonKey(name: 'icon_url')
-  String get iconURL;
+  String get nickname;
+  @override
+  String get iconUrl;
+  @override
+  int get chips;
+  @override
+  List<SymbolPocket> get symbolPockets;
   @override
   String get selfIntro;
+  @override
+  DateTime get createdAt;
+  @override
+  DateTime get updatedAt;
   @override
   @JsonKey(ignore: true)
   _$UserCopyWith<_User> get copyWith => throw _privateConstructorUsedError;

@@ -1,5 +1,4 @@
 import './put_box.dart';
-import '../../types/api_models.dart' as model;
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -12,19 +11,19 @@ class Board extends HookConsumerWidget {
           Row(
             children: [
               PutBox(),
-              Spacer(),
+              const Spacer(),
               PutBox(),
             ],
           ),
           Stack(
             alignment: Alignment.center,
             children: [
-              Container(
+              SizedBox(
                 width: 200,
                 height: 200,
                 child: Image.asset('assets/images/wheel-outer.png'),
               ),
-              Container(
+              SizedBox(
                 width: 100,
                 height: 100,
                 child: Image.asset('assets/images/wheel-inner.png'),
@@ -34,7 +33,7 @@ class Board extends HookConsumerWidget {
           Row(
             children: [
               PutBox(),
-              Spacer(),
+              const Spacer(),
               PutBox(),
             ],
           ),

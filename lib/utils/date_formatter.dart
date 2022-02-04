@@ -28,14 +28,14 @@ extension DateFormatter on DateTime {
     } else if (diffSec < 60 * 60) {
       if (minutesAgo != null) {
         if (showMinutes) {
-          return '${difference.inMinutes.toString()}' + minutesAgo;
+          return difference.inMinutes.toString() + minutesAgo;
         } else {
           return minutesAgo;
         }
       }
     } else if (diffSec < 60 * 60 * 24) {
       if (hoursAgo != null) {
-        return '${difference.inHours.toString()}' + hoursAgo;
+        return difference.inHours.toString() + hoursAgo;
       }
     } else if (diffSec < 60 * 60 * 24 * 2) {
       if (yesterday != null) {
@@ -43,6 +43,6 @@ extension DateFormatter on DateTime {
       }
     }
 
-    return this.format(baseFormat);
+    return format(baseFormat);
   }
 }

@@ -31,6 +31,7 @@ dev_dependencies:
   build_runner: # コード生成補助
   freezed: # immutable なクラスを作成
   json_serializable: # JSONシリアライズ
+  flutter_lints: # 静的解析
 
 flutter:
   uses-material-design: true

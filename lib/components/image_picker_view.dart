@@ -1,7 +1,6 @@
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import '../../utils/image_picker.dart';
 
 class ImagePickerView extends HookConsumerWidget {
@@ -13,7 +12,7 @@ class ImagePickerView extends HookConsumerWidget {
   final void Function() onTapDelete;
   final void Function(String reason)? onFailedPickImage;
 
-  ImagePickerView({
+  const ImagePickerView({
     this.width = 220,
     this.height = 220,
     required this.placeHolder,
@@ -29,7 +28,7 @@ class ImagePickerView extends HookConsumerWidget {
         width: width - 20,
         height: height - 20,
         child: placeHolder,
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         color: Colors.transparent,
       );
     } else {
@@ -46,14 +45,14 @@ class ImagePickerView extends HookConsumerWidget {
                   imageBytes!,
                   fit: BoxFit.cover,
                 ),
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 color: Colors.transparent,
               ),
             ],
           ),
           Positioned(
             child: FloatingActionButton(
-              child: Icon(Icons.delete),
+              child: const Icon(Icons.delete),
               onPressed: () => onTapDelete(),
               backgroundColor: Colors.blue,
             ),

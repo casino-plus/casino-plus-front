@@ -1,4 +1,3 @@
-import '../../state/login_user.dart' as login_user_state;
 import '../../components/chip_counter.dart';
 import '../menu/menu.dart';
 import 'package:flutter/material.dart';
@@ -10,24 +9,22 @@ class Profile extends HookConsumerWidget {
     debugPrint('プロフィール画面がビルドされました');
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile'),
+        title: const Text('Profile'),
       ),
       drawer: ProviderScope(
         child: Menu(),
       ),
       body: Column(
         children: [
-          Container(
+          const SizedBox(
             width: 300,
             height: 60,
-            child:
-                Text(ref.watch(login_user_state.provider).loginUser.nickname),
+            child: Text('Rubydog'),
           ),
-          Container(
+          const SizedBox(
             width: 300,
             height: 60,
-            child: ChipCounter(
-                ref.watch(login_user_state.provider).loginUser.chip),
+            child: ChipCounter(500),
           ),
           TextButton(
             onPressed: () {

@@ -1,6 +1,4 @@
 import '../types/upload_config.dart';
-import '../config/web_api.dart' as config;
-import '../stub_data/upload_config.dart' as stub;
 
 class API {
   String path() {
@@ -47,9 +45,5 @@ class Response {
 }
 
 Future<Response> sendRequest(Request request) async {
-  if (config.webAPI.useStub) {
-    return stub.getResponse();
-  }
-
   throw ('ファイルアップロードは現在利用できません client/get_upload_config.dart');
 }

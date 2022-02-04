@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'symbol_pocket.dart';
 part 'user.freezed.dart';
 part 'user.g.dart';
 
@@ -10,9 +11,14 @@ class User with _$User {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory User({
     required int id,
-    required String name,
-    @JsonKey(name: 'icon_url') required String iconURL,
+    required String mail,
+    required String nickname,
+    required String iconUrl,
+    required int chips,
+    required List<SymbolPocket> symbolPockets,
     required String selfIntro,
+    required DateTime createdAt,
+    required DateTime updatedAt,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);

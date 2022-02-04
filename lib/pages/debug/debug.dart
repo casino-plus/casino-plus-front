@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'dart:typed_data';
-import '../../types/api_models.dart';
 import '../../components/image_picker_view.dart';
-import '../../center_client/create_user.dart' as create_user;
 
 class Debug extends HookConsumerWidget {
   @override
@@ -11,13 +9,13 @@ class Debug extends HookConsumerWidget {
     return Column(
       children: [
         ImagePickerView(
-          placeHolder: Text('ここをタップして画像を選択'),
+          placeHolder: const Text('ここをタップして画像を選択'),
           onTapDelete: () => {},
           onPickImage: (bytes) => {},
           onFailedPickImage: (err) => {},
           imageBytes: null,
         ),
-        TextButton(
+        const TextButton(
           onPressed: onPressed,
           child: Text('Debug2'),
         ),
@@ -32,9 +30,4 @@ void onPickImage(Uint8List imageBytes) async {
   img = imageBytes;
 }
 
-void onPressed() async {
-  final user = User('testmail', 'testname');
-  final req = create_user.Request(user);
-  final res = await create_user.sendRequest(req, img!);
-  debugPrint(res.user!.iconURL);
-}
+void onPressed() async {}

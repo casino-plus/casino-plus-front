@@ -5,9 +5,8 @@ SharedPreferences? _chacePrefs;
 
 // ストレージ接続オブジェクトの取得
 Future<SharedPreferences> getPrefs() async {
-  if (_chacePrefs == null) {
-    _chacePrefs = await SharedPreferences.getInstance();
-  }
+  // null の場合だけ初回読み込みする
+  _chacePrefs ??= await SharedPreferences.getInstance();
   return _chacePrefs!;
 }
 
