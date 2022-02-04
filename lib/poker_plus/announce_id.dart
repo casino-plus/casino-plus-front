@@ -1,4 +1,4 @@
-enum AnnounceType {
+enum AnnounceId {
   betStart,
   putStart,
   putAction,
