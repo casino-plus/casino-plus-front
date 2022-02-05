@@ -12,15 +12,15 @@ class Router {
   Router(this._read);
 
   pushBaseNavi(PageId id) {
-    final oldState = _read(naviState);
+    final oldState = _read(baseNaviState);
     var stack = <PageId>[...oldState.stack, id];
     final newState = NaviState(stack: stack);
-    _read(naviState.notifier).update(newState);
+    _read(baseNaviState.notifier).update(newState);
   }
 
   setBaseNavi(List<PageId> stack) {
     final newState = NaviState(stack: stack);
-    _read(naviState.notifier).update(newState);
+    _read(baseNaviState.notifier).update(newState);
   }
 
   push(BuildContext context, String route) async {

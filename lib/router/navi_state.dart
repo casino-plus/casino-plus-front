@@ -18,7 +18,7 @@ class _Notifier extends StateNotifier<NaviState> {
 }
 
 /// 公開
-final naviState = StateNotifierProvider<_Notifier, NaviState>((ref) {
+final baseNaviState = StateNotifierProvider<_Notifier, NaviState>((ref) {
   // 初期化
   const initialState = NaviState(
     stack: [
