@@ -15,22 +15,16 @@ class Profile extends HookConsumerWidget {
         child: Menu(),
       ),
       body: Column(
-        children: [
-          const SizedBox(
+        children: const [
+          SizedBox(
             width: 300,
             height: 60,
             child: Text('Rubydog'),
           ),
-          const SizedBox(
+          SizedBox(
             width: 300,
             height: 60,
             child: ChipCounter(500),
-          ),
-          TextButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/play');
-            },
-            child: Image.asset('assets/images/game-poker-plus.png'),
           ),
         ],
       ),

@@ -8,7 +8,12 @@ class NavigationDrawer extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final tiles = items.map((item) => item.buildListTile(context));
-    return Drawer(child: Column(children: tiles.toList()));
+    return Drawer(
+      child: Container(
+        color: Colors.green,
+        child: Column(children: tiles.toList()),
+      ),
+    );
   }
 }
 

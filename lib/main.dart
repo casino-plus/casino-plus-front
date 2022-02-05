@@ -1,3 +1,5 @@
+import 'package:casino_plus/router/navi_builder.dart';
+import 'package:casino_plus/router/navi_window.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'config/color_theme.dart';
@@ -22,12 +24,7 @@ class CasinoPlusApp extends HookConsumerWidget {
       title: 'Casino+',
       theme: colorTheme(),
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
-      routes: {
-        '/': (context) => Splash(),
-        '/home': (context) => Home(),
-        '/play': (context) => Play(),
-      },
+      home: NaviWindow(builder: NaviBuilder()),
     );
   }
 }
