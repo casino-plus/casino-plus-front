@@ -1,4 +1,0 @@
-enum ModalId {
-  badNetwork,
-  oldVersion,
-}
