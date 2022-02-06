@@ -23,7 +23,7 @@ class _$UserTearOff {
   const _$UserTearOff();
 
   _User call(
-      {required int id,
+      {required String id,
       required String mail,
       required String nickname,
       required String iconUrl,
@@ -55,7 +55,7 @@ const $User = _$UserTearOff();
 
 /// @nodoc
 mixin _$User {
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   String get mail => throw _privateConstructorUsedError;
   String get nickname => throw _privateConstructorUsedError;
   String get iconUrl => throw _privateConstructorUsedError;
@@ -75,7 +75,7 @@ abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res>;
   $Res call(
-      {int id,
+      {String id,
       String mail,
       String nickname,
       String iconUrl,
@@ -110,7 +110,7 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       mail: mail == freezed
           ? _value.mail
           : mail // ignore: cast_nullable_to_non_nullable
@@ -153,7 +153,7 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       __$UserCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int id,
+      {String id,
       String mail,
       String nickname,
       String iconUrl,
@@ -189,7 +189,7 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       mail: mail == freezed
           ? _value.mail
           : mail // ignore: cast_nullable_to_non_nullable
@@ -245,7 +245,7 @@ class _$_User extends _User {
   factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
 
   @override
-  final int id;
+  final String id;
   @override
   final String mail;
   @override
@@ -311,7 +311,7 @@ class _$_User extends _User {
 
 abstract class _User extends User {
   factory _User(
-      {required int id,
+      {required String id,
       required String mail,
       required String nickname,
       required String iconUrl,
@@ -325,7 +325,7 @@ abstract class _User extends User {
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
   @override
-  int get id;
+  String get id;
   @override
   String get mail;
   @override

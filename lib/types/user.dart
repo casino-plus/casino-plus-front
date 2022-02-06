@@ -10,7 +10,7 @@ class User with _$User {
   // ignore: invalid_annotation_target
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory User({
-    required int id,
+    required String id,
     required String mail,
     required String nickname,
     required String iconUrl,

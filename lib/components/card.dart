@@ -1,9 +1,129 @@
+import 'package:casino_plus/components/assets_image.dart';
+import 'package:casino_plus/config/image_names.dart';
+import 'package:casino_plus/types/card_id.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class Card extends HookConsumerWidget {
+  final CardId cardId;
+  const Card(this.cardId);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Image.asset('assets/images/card-As.png');
+    return LocalImage(_imageName(cardId));
+  }
+}
+
+String _imageName(CardId id) {
+  switch (id) {
+    case CardId.back:
+      return ImageNames.cardBack;
+    case CardId.spade1:
+      return ImageNames.cardBack;
+    case CardId.spade2:
+      return ImageNames.cardBack;
+    case CardId.spade3:
+      return ImageNames.cardBack;
+    case CardId.spade4:
+      return ImageNames.cardBack;
+    case CardId.spade5:
+      return ImageNames.cardBack;
+    case CardId.spade6:
+      return ImageNames.cardBack;
+    case CardId.spade7:
+      return ImageNames.cardBack;
+    case CardId.spade8:
+      return ImageNames.cardBack;
+    case CardId.spade9:
+      return ImageNames.cardBack;
+    case CardId.spade10:
+      return ImageNames.cardBack;
+    case CardId.spade11:
+      return ImageNames.cardBack;
+    case CardId.spade12:
+      return ImageNames.cardBack;
+    case CardId.spade13:
+      return ImageNames.cardBack;
+    case CardId.heart1:
+      return ImageNames.cardBack;
+    case CardId.heart2:
+      return ImageNames.cardBack;
+    case CardId.heart3:
+      return ImageNames.cardBack;
+    case CardId.heart4:
+      return ImageNames.cardBack;
+    case CardId.heart5:
+      return ImageNames.cardBack;
+    case CardId.heart6:
+      return ImageNames.cardBack;
+    case CardId.heart7:
+      return ImageNames.cardBack;
+    case CardId.heart8:
+      return ImageNames.cardBack;
+    case CardId.heart9:
+      return ImageNames.cardBack;
+    case CardId.heart10:
+      return ImageNames.cardBack;
+    case CardId.heart11:
+      return ImageNames.cardBack;
+    case CardId.heart12:
+      return ImageNames.cardBack;
+    case CardId.heart13:
+      return ImageNames.cardBack;
+    case CardId.diamond1:
+      return ImageNames.cardBack;
+    case CardId.diamond2:
+      return ImageNames.cardBack;
+    case CardId.diamond3:
+      return ImageNames.cardBack;
+    case CardId.diamond4:
+      return ImageNames.cardBack;
+    case CardId.diamond5:
+      return ImageNames.cardBack;
+    case CardId.diamond6:
+      return ImageNames.cardBack;
+    case CardId.diamond7:
+      return ImageNames.cardBack;
+    case CardId.diamond8:
+      return ImageNames.cardBack;
+    case CardId.diamond9:
+      return ImageNames.cardBack;
+    case CardId.diamond10:
+      return ImageNames.cardBack;
+    case CardId.diamond11:
+      return ImageNames.cardBack;
+    case CardId.diamond12:
+      return ImageNames.cardBack;
+    case CardId.diamond13:
+      return ImageNames.cardBack;
+    case CardId.club1:
+      return ImageNames.cardBack;
+    case CardId.club2:
+      return ImageNames.cardBack;
+    case CardId.club3:
+      return ImageNames.cardBack;
+    case CardId.club4:
+      return ImageNames.cardBack;
+    case CardId.club5:
+      return ImageNames.cardBack;
+    case CardId.club6:
+      return ImageNames.cardBack;
+    case CardId.club7:
+      return ImageNames.cardBack;
+    case CardId.club8:
+      return ImageNames.cardBack;
+    case CardId.club9:
+      return ImageNames.cardBack;
+    case CardId.club10:
+      return ImageNames.cardBack;
+    case CardId.club11:
+      return ImageNames.cardBack;
+    case CardId.club12:
+      return ImageNames.cardBack;
+    case CardId.club13:
+      return ImageNames.cardBack;
+    case CardId.blackJocker:
+      return ImageNames.cardBack;
+    case CardId.whiteJocker:
+      return ImageNames.cardBack;
   }
 }

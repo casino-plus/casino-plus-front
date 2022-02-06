@@ -10,7 +10,8 @@ class Menu extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return NavigationDrawer(
-      [
+      color: const Color(0xFF006400),
+      items: [
         Item(
           '開発者より',
           buildBody: () => DeveloperMessage(),

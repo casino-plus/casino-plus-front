@@ -24,6 +24,7 @@ dependencies:
   shared_preferences: # 簡易的なローカルDB
   flutter_launcher_icons: # アプリアイコン
   flutter_native_splash: # ネイティブのスプラッシュ画面
+  uuid: # UUID
 
 dev_dependencies:
   flutter_test:

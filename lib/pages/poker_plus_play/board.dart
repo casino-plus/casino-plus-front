@@ -1,3 +1,6 @@
+import 'package:casino_plus/components/assets_image.dart';
+import 'package:casino_plus/config/image_names.dart';
+
 import './put_box.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -17,16 +20,16 @@ class Board extends HookConsumerWidget {
           ),
           Stack(
             alignment: Alignment.center,
-            children: [
+            children: const [
               SizedBox(
                 width: 200,
                 height: 200,
-                child: Image.asset('assets/images/wheel-outer.png'),
+                child: LocalImage(ImageNames.pokerPlusWheelOuter),
               ),
               SizedBox(
                 width: 100,
                 height: 100,
-                child: Image.asset('assets/images/wheel-inner.png'),
+                child: LocalImage(ImageNames.pokerPlusWheelInner),
               ),
             ],
           ),

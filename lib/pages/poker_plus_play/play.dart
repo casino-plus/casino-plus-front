@@ -1,3 +1,4 @@
+import 'package:casino_plus/pages/poker_plus_play/header.dart';
 import 'player.dart';
 import 'dock.dart';
 import 'board.dart';
@@ -10,6 +11,7 @@ class Play extends HookConsumerWidget {
     return Scaffold(
       body: Column(
         children: [
+          Header(),
           Row(
             children: [
               Column(

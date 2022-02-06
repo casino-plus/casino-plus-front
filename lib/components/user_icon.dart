@@ -1,14 +1,17 @@
+import 'package:casino_plus/components/assets_image.dart';
+import 'package:casino_plus/components/url_image.dart';
+import 'package:casino_plus/config/image_names.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class UserIcon extends HookConsumerWidget {
-  final String iconURL;
+  final String iconUrl;
   final double size;
   final double? cornerRadius;
   final Color? borderColor;
   final double? borderWidth;
   const UserIcon(
-    this.iconURL, {
+    this.iconUrl, {
     this.size = 120,
     this.cornerRadius,
     this.borderColor,
@@ -25,27 +28,6 @@ class UserIcon extends HookConsumerWidget {
     }
   }
 
-  Widget? image(String url) {
-    if (url.startsWith('assets/')) {
-      return Image.asset(
-        url,
-        fit: BoxFit.cover,
-      );
-    }
-    if (url.startsWith('http://') || url.startsWith('https://')) {
-      return Image.network(
-        url,
-        errorBuilder: (context, exception, stackTrace) {
-          return Image.asset(
-            'assets/images/guest.png',
-            fit: BoxFit.cover,
-          );
-        },
-      );
-    }
-    return null;
-  }
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
@@ -60,7 +42,7 @@ class UserIcon extends HookConsumerWidget {
         child: SizedBox(
           width: size,
           height: size,
-          child: image(iconURL),
+          child: UrlImage(iconUrl),
         ),
       ),
     );

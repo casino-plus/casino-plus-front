@@ -3,12 +3,12 @@ import 'package:casino_plus/types/user.dart';
 import 'package:casino_plus/types/keycard.dart';
 
 /// 構造
-class _State {
+class AccountState {
   final User? loginUser;
   final List<String> logoutUserIds;
   final Keycard? keycard;
 
-  const _State({
+  const AccountState({
     required this.loginUser,
     required this.logoutUserIds,
     required this.keycard,
@@ -16,18 +16,17 @@ class _State {
 }
 
 /// バインド
-class _Notifier extends StateNotifier<_State> {
-  _Notifier(_State state) : super(state);
-  update(_State state) {
+class _Notifier extends StateNotifier<AccountState> {
+  _Notifier(AccountState state) : super(state);
+  update(AccountState state) {
     this.state = state;
   }
 }
 
 /// 公開
-final accountState =
-    StateNotifierProvider.autoDispose<_Notifier, _State>((ref) {
+final accountState = StateNotifierProvider<_Notifier, AccountState>((ref) {
   // 初期化
-  const initialState = _State(
+  const initialState = AccountState(
     loginUser: null,
     logoutUserIds: [],
     keycard: null,

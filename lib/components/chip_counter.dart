@@ -1,3 +1,5 @@
+import 'package:casino_plus/components/assets_image.dart';
+import 'package:casino_plus/config/image_names.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -14,7 +16,7 @@ class ChipCounter extends HookConsumerWidget {
       ),
       child: Row(
         children: [
-          Image.asset('assets/images/chip.png'),
+          const LocalImage(ImageNames.chip),
           Text(chipCount.toString()),
         ],
       ),

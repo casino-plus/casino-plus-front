@@ -43,7 +43,7 @@ class ImagePickerView extends HookConsumerWidget {
                 height: height,
                 child: Image.memory(
                   imageBytes!,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
                 padding: const EdgeInsets.all(20),
                 color: Colors.transparent,

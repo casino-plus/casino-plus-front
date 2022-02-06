@@ -2,27 +2,27 @@ import 'package:riverpod/riverpod.dart';
 import 'package:casino_plus/types/loading_task.dart';
 
 /// 構造
-class _State {
+class LoadingState {
   final List<LoadingTask> tasks;
 
-  const _State({
+  const LoadingState({
     required this.tasks,
   });
 }
 
 /// バインド
-class _Notifier extends StateNotifier<_State> {
-  _Notifier(_State state) : super(state);
-  update(_State state) {
+class _Notifier extends StateNotifier<LoadingState> {
+  _Notifier(LoadingState state) : super(state);
+  update(LoadingState state) {
     this.state = state;
   }
 }
 
 /// 公開
 final loadingState =
-    StateNotifierProvider.autoDispose<_Notifier, _State>((ref) {
+    StateNotifierProvider.autoDispose<_Notifier, LoadingState>((ref) {
   // 初期化
-  const initialState = _State(
+  const initialState = LoadingState(
     tasks: [],
   );
   return _Notifier(initialState);

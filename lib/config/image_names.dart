@@ -1,132 +1,131 @@
 class ImageNames {
-  static String splash = 'splash';
+  static const String splash = 'splash.png';
 
-  static String chip = 'chip';
-  static String chipFlat = 'chip-flat';
-  static String chip3 = 'chip3';
-  static String chip5 = 'chip5';
-  static String chip7 = 'chip7';
-  static String chipTower = 'chip-tower';
+  static const String chip = 'chip.png';
+  static const String chipFlat = 'chip-flat.png';
+  static const String chip3 = 'chip3.png';
+  static const String chip5 = 'chip5.png';
+  static const String chip7 = 'chip7.png';
+  static const String chipTower = 'chip-tower.png';
 
-  static String drinkchampagne = 'drink-champagne';
-  static String drinkBeer = 'drink-beer';
-  static String drinkBrandy = 'drink-brandy';
-  static String drinkCocktail = 'drink-cocktail';
-  static String drinkLiqueur = 'drink-liqueur';
-  static String drinkSpirits = 'drink-spirits';
-  static String drinkWine = 'drink-wine';
+  static const String drinkchampagne = 'drink-champagne.png';
+  static const String drinkBeer = 'drink-beer.png';
+  static const String drinkBrandy = 'drink-brandy.png';
+  static const String drinkCocktail = 'drink-cocktail.png';
+  static const String drinkLiqueur = 'drink-liqueur.png';
+  static const String drinkSpirits = 'drink-spirits.png';
+  static const String drinkWine = 'drink-wine.png';
 
-  static String iconGuest = 'icon-guest';
-  static String iconBot1 = 'icon-bot1';
-  static String iconBot2 = 'icon-bot2';
-  static String iconBot3 = 'icon-bot3';
-  static String iconBot4 = 'icon-bot4';
-  static String iconBot5 = 'icon-bot5';
-  static String iconBot6 = 'icon-bot6';
-  static String iconBot7 = 'icon-bot7';
-  static String iconBot8 = 'icon-bot8';
-  static String iconBot9 = 'icon-bot9';
-  static String iconBot10 = 'icon-bot10';
-  static String iconBot11 = 'icon-bot11';
+  static const String iconGuest = 'icon-guest.png';
+  static const String iconBot1 = 'icon-bot1.png';
+  static const String iconBot2 = 'icon-bot2.png';
+  static const String iconBot3 = 'icon-bot3.png';
+  static const String iconBot4 = 'icon-bot4.png';
+  static const String iconBot5 = 'icon-bot5.png';
+  static const String iconBot6 = 'icon-bot6.png';
+  static const String iconBot7 = 'icon-bot7.png';
+  static const String iconBot8 = 'icon-bot8.png';
+  static const String iconBot9 = 'icon-bot9.png';
+  static const String iconBot10 = 'icon-bot10.png';
+  static const String iconBot11 = 'icon-bot11.png';
 
-  static String diceFace0 = 'dice-face0';
-  static String diceFace1 = 'dice-face1';
-  static String diceFace2 = 'dice-face2';
-  static String diceFace3 = 'dice-face3';
-  static String diceFace4 = 'dice-face4';
-  static String diceFace5 = 'dice-face5';
-  static String diceFace6 = 'dice-face6';
+  static const String diceFace0 = 'dice-face0.png';
+  static const String diceFace1 = 'dice-face1.png';
+  static const String diceFace2 = 'dice-face2.png';
+  static const String diceFace3 = 'dice-face3.png';
+  static const String diceFace4 = 'dice-face4.png';
+  static const String diceFace5 = 'dice-face5.png';
+  static const String diceFace6 = 'dice-face6.png';
 
-  static String cardBack = 'card-back';
-  static String cardSpade1 = 'card-spade1';
-  static String cardSpade1Flat = 'card-spade1-flat';
-  static String cardSpade11 = 'card-spade11';
-  static String cardSpade11Flat = 'card-spade11-flat';
-  static String cardSpade12 = 'card-spade12';
-  static String cardSpade12Flat = 'card-spade12-flat';
-  static String cardHeart1 = 'card-heart1';
-  static String cardHeart1Flat = 'card-heart1-flat';
-  static String cardHeart11 = 'card-heart11';
-  static String cardHeart11Flat = 'card-heart11-flat';
-  static String cardHeart12 = 'card-heart12';
-  static String cardHeart12Flat = 'card-heart12-flat';
-  static String cardDiamond11 = 'card-diamond11';
-  static String cardDiamond11Flat = 'card-diamond11-flat';
-  static String cardDiamond12 = 'card-diamond12';
-  static String cardDiamond12Flat = 'card-diamond12-flat';
-  static String cardDiamond13 = 'card-diamond13';
-  static String cardDiamond13Flat = 'card-diamond13-flat';
-  static String cardClub11 = 'card-club11';
-  static String cardClub11Flat = 'card-club11-flat';
-  static String cardClub12 = 'card-club12';
-  static String cardClub12Flat = 'card-club12-flat';
+  static const String cardBack = 'card-back.png';
+  static const String cardSpade1 = 'card-spade1.png';
+  static const String cardSpade1Flat = 'card-spade1-flat.png';
+  static const String cardSpade11 = 'card-spade11.png';
+  static const String cardSpade11Flat = 'card-spade11-flat.png';
+  static const String cardSpade12 = 'card-spade12.png';
+  static const String cardSpade12Flat = 'card-spade12-flat.png';
+  static const String cardHeart1 = 'card-heart1.png';
+  static const String cardHeart1Flat = 'card-heart1-flat.png';
+  static const String cardHeart11 = 'card-heart11.png';
+  static const String cardHeart11Flat = 'card-heart11-flat.png';
+  static const String cardHeart12 = 'card-heart12.png';
+  static const String cardHeart12Flat = 'card-heart12-flat.png';
+  static const String cardDiamond11 = 'card-diamond11.png';
+  static const String cardDiamond11Flat = 'card-diamond11-flat.png';
+  static const String cardDiamond12 = 'card-diamond12.png';
+  static const String cardDiamond12Flat = 'card-diamond12-flat.png';
+  static const String cardDiamond13 = 'card-diamond13.png';
+  static const String cardDiamond13Flat = 'card-diamond13-flat.png';
+  static const String cardClub11 = 'card-club11.png';
+  static const String cardClub11Flat = 'card-club11-flat.png';
+  static const String cardClub12 = 'card-club12.png';
+  static const String cardClub12Flat = 'card-club12-flat.png';
 
-  static String gamePokerPlus = 'game-poker-plus';
+  static const String gamePokerPlus = 'game-poker-plus.png';
 
-  static String pokerPlusWheelInner = 'poker-plus-wheel-inner';
-  static String pokerPlusWheelInnerClubFlat =
-      'poker-plus-wheel-inner-club-flat';
-  static String pokerPlusWheelInnerHeartFlat =
-      'poker-plus-wheel-inner-heart-flat';
-  static String pokerPlusWheelInnerJokerFlat =
-      'poker-plus-wheel-inner-joker-flat';
-  static String pokerPlusWheelInnerDiamondFlat =
-      'poker-plus-wheel-inner-diamond-flat';
-  static String pokerPlusWheelOuter = 'poker-plus-wheel-outer';
-  static String pokerPlusWheelOuterDiamond12Flat =
-      'poker-plus-wheel-outer-diamond12-flat';
-  static String pokerPlusWheelOuterClub11Flat =
-      'poker-plus-wheel-outer-club11-flat';
-  static String pokerPlusWheelOuterSpade13Flat =
-      'poker-plus-wheel-outer-spade13-flat';
-  static String pokerPlusWheelOuterHeart1Flat =
-      'poker-plus-wheel-outer-heart1-flat';
-  static String pokerPlusPutBox = 'poker-plus-put-box';
-  static String pokerplusEffectJ = 'poker-plus-effect-j';
-  static String pokerplusEffectQ = 'poker-plus-effect-q';
-  static String pokerplusEffectK = 'poker-plus-effect-k';
+  static const String pokerPlusWheelInner = 'poker-plus-wheel-inner.png';
+  static const String pokerPlusWheelInnerClubFlat =
+      'poker-plus-wheel-inner-club-flat.png';
+  static const String pokerPlusWheelInnerHeartFlat =
+      'poker-plus-wheel-inner-heart-flat.png';
+  static const String pokerPlusWheelInnerJokerFlat =
+      'poker-plus-wheel-inner-joker-flat.png';
+  static const String pokerPlusWheelInnerDiamondFlat =
+      'poker-plus-wheel-inner-diamond-flat.png';
+  static const String pokerPlusWheelOuter = 'poker-plus-wheel-outer.png';
+  static const String pokerPlusWheelOuterDiamond12Flat =
+      'poker-plus-wheel-outer-diamond12-flat.png';
+  static const String pokerPlusWheelOuterClub11Flat =
+      'poker-plus-wheel-outer-club11-flat.png';
+  static const String pokerPlusWheelOuterSpade13Flat =
+      'poker-plus-wheel-outer-spade13-flat.png';
+  static const String pokerPlusWheelOuterHeart1Flat =
+      'poker-plus-wheel-outer-heart1-flat.png';
+  static const String pokerPlusPutBox = 'poker-plus-put-box.png';
+  static const String pokerplusEffectJ = 'poker-plus-effect-j.png';
+  static const String pokerplusEffectQ = 'poker-plus-effect-q.png';
+  static const String pokerplusEffectK = 'poker-plus-effect-k.png';
 
-  static String slotFlat = 'slot-flat';
-  static String slotMachineClassicFlat = 'slot-machine-classic-flat';
-  static String slotMachineFreeFlat = 'slot-machine-free-flat';
-  static String slotMachinePlangFlat = 'slot-machine-plang-flat';
-  static String slotMachineV1Flat = 'slot-machine-v1-flat';
+  static const String slotFlat = 'slot-flat.png';
+  static const String slotMachineClassicFlat = 'slot-machine-classic-flat.png';
+  static const String slotMachineFreeFlat = 'slot-machine-free-flat.png';
+  static const String slotMachinePlangFlat = 'slot-machine-plang-flat.png';
+  static const String slotMachineV1Flat = 'slot-machine-v1-flat.png';
 
-  static String symbolChampagne = 'symbol-champagne';
-  static String symbolBeer = 'symbol-beer';
-  static String symbolBrandy = 'symbol-brandy';
-  static String symbolCocktail = 'symbol-cocktail';
-  static String symbolLiqueur = 'symbol-liqueur';
-  static String symbolSpirits = 'symbol-spirits';
-  static String symbolWine = 'symbol-wine';
-  static String symbolBell = 'symbol-bell';
-  static String symbolCherry = 'symbol-cherry';
-  static String symbolClover = 'symbol-clover';
-  static String symbolHorseshoe = 'symbol-horseshoe';
-  static String symbolLuckySeven = 'symbol-lucky-seven';
-  static String symbolPlClang = 'symbol-pl-clang';
-  static String symbolPlCplusplus = 'symbol-pl-cplusplus';
-  static String symbolPlCsharp = 'symbol-pl-csharp';
-  static String symbolPlDart = 'symbol-pl-dart';
-  static String symbolPlGolang = 'symbol-pl-golang';
-  static String symbolPlJava = 'symbol-pl-java';
-  static String symbolPlJavascript = 'symbol-pl-javascript';
-  static String symbolPlKotlin = 'symbol-pl-kotlin';
-  static String symbolPlPhp = 'symbol-pl-php';
-  static String symbolPlPython = 'symbol-pl-python';
-  static String symbolPlruby = 'symbol-pl-ruby';
-  static String symbolPlSwift = 'symbol-pl-swift';
-  static String symbolPlTypescript = 'symbol-pl-typescript';
-  static String symbolChip1 = 'symbol-chip1';
-  static String symbolChip2 = 'symbol-chip2';
-  static String symbolChip3 = 'symbol-chip3';
-  static String symbolChip10 = 'symbol-chip10';
-  static String symbolChip0 = 'symbol-chip0';
-  static String symbolAppicon = 'symbol-appicon';
-  static String symbolSpade = 'symbol-spade';
-  static String symbolHeart = 'symbol-heart';
-  static String symbolDiamond = 'symbol-diamond';
-  static String symbolClub = 'symbol-club';
-  static String symbolOpen = 'symbol-open';
-  static String symbolV1 = 'symbol-v1';
+  static const String symbolChampagne = 'symbol-champagne.png';
+  static const String symbolBeer = 'symbol-beer.png';
+  static const String symbolBrandy = 'symbol-brandy.png';
+  static const String symbolCocktail = 'symbol-cocktail.png';
+  static const String symbolSpirits = 'symbol-spirits.png';
+  static const String symbolWine = 'symbol-wine.png';
+  static const String symbolBell = 'symbol-bell.png';
+  static const String symbolCherry = 'symbol-cherry.png';
+  static const String symbolClover = 'symbol-clover.png';
+  static const String symbolHorseshoe = 'symbol-horseshoe.png';
+  static const String symbolLuckySeven = 'symbol-lucky-seven.png';
+  static const String symbolPlClang = 'symbol-pl-clang.png';
+  static const String symbolPlCplusplus = 'symbol-pl-cplusplus.png';
+  static const String symbolPlCsharp = 'symbol-pl-csharp.png';
+  static const String symbolPlDart = 'symbol-pl-dart.png';
+  static const String symbolPlGolang = 'symbol-pl-golang.png';
+  static const String symbolPlJava = 'symbol-pl-java.png';
+  static const String symbolPlJavascript = 'symbol-pl-javascript.png';
+  static const String symbolPlKotlin = 'symbol-pl-kotlin.png';
+  static const String symbolPlPhp = 'symbol-pl-php.png';
+  static const String symbolPlPython = 'symbol-pl-python.png';
+  static const String symbolPlruby = 'symbol-pl-ruby.png';
+  static const String symbolPlSwift = 'symbol-pl-swift.png';
+  static const String symbolPlTypescript = 'symbol-pl-typescript.png';
+  static const String symbolChip1 = 'symbol-chip1.png';
+  static const String symbolChip2 = 'symbol-chip2.png';
+  static const String symbolChip3 = 'symbol-chip3.png';
+  static const String symbolChip10 = 'symbol-chip10.png';
+  static const String symbolChip0 = 'symbol-chip0.png';
+  static const String symbolAppicon = 'symbol-appicon.png';
+  static const String symbolSpade = 'symbol-spade.png';
+  static const String symbolHeart = 'symbol-heart.png';
+  static const String symbolDiamond = 'symbol-diamond.png';
+  static const String symbolClub = 'symbol-club.png';
+  static const String symbolOpen = 'symbol-open.png';
+  static const String symbolV1 = 'symbol-v1.png';
 }
